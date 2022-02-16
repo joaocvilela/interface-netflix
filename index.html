@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/main.css" />
 
+    <!--Adicionando modal-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+
     <!--responsividade-->
     <link rel="stylesheet" href="style/responsive.css" />
 
@@ -16,7 +24,7 @@
     <title>RECRIANDO NETFLIX INTERFACE</title>
   </head>
   <body>
-    <header>
+    <header class="cabecalho">
       <div class="container">
         <h2 class="logo">NETFLIX</h2>
         <nav>
@@ -42,18 +50,50 @@
             meios possíveis em um jogo político pela disputa do Trono de Ferro,
             o símbolo do poder absoluto.
           </p>
+
+          <div id="modal-video" class="modal">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/KPLWWIOCOOQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <a href="#" rel="modal:close"></a>
+          </div>
+
+          <div id="modal-conteudo" class="modal">
+            <h3>Informações Adicionais</h3>
+            <p>
+              Game of Thrones é uma série da HBO que conta a história da guerra
+              civil de um país medieval. ... Quando a história começa, um verão
+              de uma década está terminando, e o inverno se aproxima enquanto os
+              personagens lutam para reivindicar o "Trono de Ferro", a sede do
+              rei dos Sete Reinos, o regime que governa tudo, exceto a ponta
+              norte de Westeros.
+            </p>
+            <a href="#" rel="modal:close"></a>
+          </div>
+
           <div class="botoes">
-            <button class="botao">
-              <i class="fa-solid fa-play"></i>ASSSITIR AGORA
-            </button>
-            <button class="botao">
-              <i class="fa-solid fa-plus"></i>MAIS INFORMAÇÕES
-            </button>
+            <a href="#modal-video" rel="modal:open"
+              ><button class="botao">
+                <i class="fa-solid fa-play"></i>ASSSITIR AGORA
+              </button></a
+            >
+            <a href="#modal-conteudo" rel="modal:open"
+              ><button class="botao">
+                <i class="fa-solid fa-plus"></i>MAIS INFORMAÇÕES
+              </button></a
+            >
           </div>
         </div>
       </div>
     </main>
     <div class="carrosel-filmes">
+      <h3 class="populares container">POPULARES</h3>
       <div class="owl-carousel owl-theme">
         <div class="item">
           <img class="box-filme" src="img/filme1.jpg" alt="" srcset="" />
@@ -75,6 +115,14 @@
         </div>
       </div>
     </div>
+    <footer>
+      <nav>
+        <a href="#">Dúvidas</a>
+        <a href="#">Atendimento</a>
+        <a href="#">Suporte</a>
+        <a href="#">Direitos Reservados</a>
+      </nav>
+    </footer>
     <script
       src="https://kit.fontawesome.com/d95a9fc091.js"
       crossorigin="anonymous"

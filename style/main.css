@@ -15,6 +15,13 @@ body {
   color: white;
 }
 
+.cabecalho {
+  background: var(--preta);
+  position: -webkit-sticky; /* Necessário para funcionar no Safari */
+  position: sticky;
+  top: 0;
+}
+
 header .container {
   display: flex;
   flex-direction: row;
@@ -90,6 +97,15 @@ header nav a:hover {
   margin: 5px;
 }
 
+#modal-video.modal {
+  max-width: none;
+  width: auto;
+}
+
+#modal-conteudo.modal {
+  color: #141414;
+}
+
 .container {
   margin-left: 20px;
   margin-right: 20px;
@@ -97,6 +113,12 @@ header nav a:hover {
 
 .filme-principal .container {
   width: 80%;
+}
+
+.populares {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
 }
 
 .box-filme {
@@ -109,33 +131,16 @@ header nav a:hover {
   margin-top: 5px;
 }
 
-#modal {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-  background: rgb(10, 10, 10);
-  border-radius: 8px;
-  padding: 16px;
+footer {
+  width: 100%;
+  padding: 20px 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  justify-content: center;
 }
 
-.botao-fechar {
-  align-self: end;
-  margin-bottom: 8px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: red;
+footer nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 10px;
+  justify-content: center;
 }
